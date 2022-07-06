@@ -9,9 +9,11 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans+KR:wght@400;700&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="main.js"></script>
 
@@ -20,12 +22,30 @@
 <body>
   <div class="wrap">
     <div class="modal">
-      <div class="modal_text">
-        <p><img src="img/error.png" alt=""> 설비알람</p>
-        <p>09:00:00 <img src="img/time.png" alt=""></p>
+      <div class="modal_slide">
+        <div class="modal_title">
+          <div>
+            <img src="img/error.png" alt=""> 
+            <p>설비알람</p> 
+          </div>
+          <div>
+            <p>09:00:00</p>
+            <img src="img/time.png" alt="">
+          </div>
+        </div>
+        <div class="modal_contents">
+          <p>AUTO PICKUP CRANE-STRUCTURE</p>
+          <p>Vuhz Sensor- #1 Coil 저항 정상값 120 기준 ±5초과</p>
+        </div>
       </div>
       <div class="modal_btn">
-        <p><img src="img/close.png" alt=""></p>
+        <button class="left">
+          <p>닫기</p><img src="img/close.png" alt="">
+        </button>
+        <span></span>
+        <button class="right">
+          <p>이동</p><img src="img/m_n.png" alt="">
+        </button>
       </div>
     </div>
     <header>
@@ -33,10 +53,6 @@
       <img src="img/Set.png" alt="">
     </header>
     <menu>
-      <!-- <div class="menu_btn">
-        <img src="img/main_menu_p.png" alt="">
-        <img src="img/main_menu_n.png" alt="">
-      </div> -->
       <div class="menu_icon autoplay">
         <a href=""><img src="img/main_icon01.png" alt="">설비</a>
         <a href=""><img src="img/main_icon02.png" alt="">점검</a>
@@ -48,55 +64,155 @@
         <a href=""><img src="img/main_icon08.png" alt="">Point</a>
       </div>
     </menu>
-      <div class="menu_list">
-        <div class="tabmenu">
-          <ul>
-            <li id="tab1" class="btnCon"> <input type="radio" checked name="tabmenu" id="tabmenu1">
-              <label for="tabmenu1">점검<p>2</p></label>
-              <div class="tabCon">          
-                <div class="tablist"><h2><span></span>4P1007891 (ENTRY WALKNG BEAM CONVEYOR)</h2></div>
-                <div class="tablist"><h2><span></span>4P1007891 (ENTRY WALKNG BEAM CONVEYOR)</h2></div>
+    <div class="menu_list">
+      <div class="tabmenu">
+        <ul>
+          <li id="tab1" class="btnCon"> <input type="radio" checked name="tabmenu" id="tabmenu1">
+            <label for="tabmenu1">점검<p>2</p></label>
+            <div class="tabCon">
+              <div class="tablist">
+                <h2><span></span>4P1007891 (ENTRY WALKNG BEAM CONVEYOR)</h2>
               </div>
-            </li>
-            <li id="tab2" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu2">
-              <label for="tabmenu2">작업주문<p>10</p></label>
-              <div class="tabCon">          
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                
-            </li>
-            <li id="tab3" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu3">
-              <label for="tabmenu3">작업의뢰<p>2</p></label>
-              <div class="tabCon">          
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
+              <div class="tablist">
+                <h2><span></span>4P1007891 (ENTRY WALKNG BEAM CONVEYOR)</h2>
               </div>
-            </li>
-            <li id="tab4" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu4">
-              <label for="tabmenu4">설비알람<p>2</p></label>
-              <div class="tabCon">          
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
-                <div class="tablist"><h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span><div><p><b>등록자</b> 이순신 (010-1234-5678)</p><p><b>계획/등록</b> 3/2</p></div></div>
+            </div>
+          </li>
+          <li id="tab2" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu2">
+            <label for="tabmenu2">작업주문<p>10</p></label>
+            <div class="tabCon">
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
               </div>
-            </li>
-          </ul>
-        </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+
+          </li>
+          <li id="tab3" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu3">
+            <label for="tabmenu3">작업의뢰<p>2</p></label>
+            <div class="tabCon">
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li id="tab4" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu4">
+            <label for="tabmenu4">설비알람<p>2</p></label>
+            <div class="tabCon">
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관 수리일정</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+              <div class="tablist">
+                <h2><span></span>K3H 수처리 Fiter Tank Back Wash 압축배관</h2><span></span>
+                <div>
+                  <p><b>등록자</b> 이순신 (010-1234-5678)</p>
+                  <p><b>계획/등록</b> 3/2</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="revert_btn">
-        <button>
-          <a onClick="window.location.reload()" style="cursor: pointer;"><img src="img/revert.png" alt=""></a>
-        </button>
-      </div>
+    </div>
+    <div class="revert_btn">
+      <button>
+        <a onClick="window.location.reload()" style="cursor: pointer;"><img src="img/revert.png" alt=""></a>
+      </button>
+    </div>
   </div>
 </body>
 
