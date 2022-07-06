@@ -1,0 +1,370 @@
+@import './reset';
+
+$main: #0073CB;
+$sup: #F9F9F9;
+$red1: #EC2B2B;
+$line: #D9D9D9;
+
+@mixin flex_c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex_b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex_a {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin flex_cm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+:root {
+  font-size: 10px;
+  color: #333;
+  accent-color: #0073CB;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  background: transparent;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  background: $sup;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  box-sizing: border-box;
+
+  .modal {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+
+    .modal_slide {
+      width: 100%;
+      background: #fff;
+      padding: 20px;
+
+      .modal_title {
+        @include flex_b;
+
+        div {
+          display: flex;
+          padding-bottom: 1.5rem;
+
+          &:nth-child(1) {
+            img {
+              width: 2.5rem;
+              margin-right: 8px;
+            }
+
+            p {
+              font-size: 2.2rem;
+              font-weight: 500;
+            }
+          }
+
+          &:nth-child(2) {
+            img {
+              width: 1.2rem;
+            }
+
+            p {
+              font-size: 1.2rem;
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+
+      .modal_contents {
+        line-height: 2.5rem;
+        font-size: 1.4rem;
+      }
+
+    }
+
+    .modal_btn {
+      width: 100%;
+      background: $main;
+      display: flex;
+      font-size: 1.6rem;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 3px 3px 7px #333;
+
+      .left,
+      .right {
+        padding: 1.5rem;
+        color: #fff;
+        @include flex_c;
+        flex: 1;
+
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-left: 5px;
+        }
+      }
+
+      .right {
+        img {
+          width: 1rem;
+          height: 1.5rem;
+          margin-left: 5px;
+        }
+      }
+
+      span {
+        border: rgba(255, 255, 255, 0.514) 1px solid;
+        height: 20px;
+        margin: 1.5rem 0;
+      }
+
+    }
+  }
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  .h_t {
+    width: 100%;
+    padding: 2rem;
+    color: #fff;
+    background: $main;
+    @include flex_c;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    img {
+      width: 3rem;
+      position: absolute;
+      right: 16px;
+    }
+  }
+
+  menu {
+    width: 100%;
+    padding: 1rem 1rem 1.5rem;
+    background: #fff;
+    margin: 0 auto;
+    z-index: 1;
+    
+
+    .menu_icon {
+      margin: 0 auto;
+      // @include flex_c;
+      display: flex;
+      align-items: center;
+
+      img {
+        margin: 8px auto;
+        width: 3.5rem;
+      }
+
+      a {
+        display: flex;
+        flex-direction: column;
+        color: #333;
+        font-size: 1.25rem;
+        text-align: center;
+      }
+    }
+
+    .slick-prev {
+      background: url(../img/main_menu_p.png);
+      margin-right: .5rem;
+    }
+
+    .slick-next {
+      background: url(../img/main_menu_n.png);
+      margin-left: .5rem;
+    }
+
+    .slick-arrow {
+      width: 1.7rem;
+      height: 3rem;
+      color: rgba(0, 0, 0, 0);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+  }
+  
+  section {
+    background-color: $sup;
+    padding: .6rem;
+    z-index: 100;
+  }
+}
+
+
+.container {
+  width: 100%;
+  padding-top: 14.5rem;
+  
+  .list {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    list-style-type: none;
+    margin: 1.2rem 0;
+    padding: 0;
+    display: flex;
+    background: #fff;
+
+  }
+  
+  .tab-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    text-decoration: none;
+    padding: 1.2rem 0;
+    cursor: pointer;
+    b {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    p {
+      width: 2rem;
+      height: 1.2rem;
+      background: $red1;
+      color: #fff;
+      border-radius: 2rem;
+      margin-left: 5px;
+      @include flex_c;
+    }
+
+  }
+}
+
+.orange {
+  border-bottom: .2rem solid $main;
+  border-top: 1px solid white;
+  color: black;
+}
+
+.tab-content {
+  display: none;
+  padding: 5.5rem 1.2rem 0;
+  
+  .tablist {
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    padding: 1.2rem;
+    margin: 1.2rem 0;
+    box-shadow: 1px 1px 7px #eee;
+  
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -.5px;
+      line-height: 10px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+  
+      span {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 14px;
+        background: $main;
+        margin-right: 1rem;
+        display: inline-block;
+      }
+  
+    }
+  
+    span {
+      margin: .7rem 0 1rem 0;
+      width: 100%;
+      border-bottom: 1px solid #F1F1F1;
+      display: block;
+    }  
+
+    div {
+      @include flex_b;
+      
+      p {
+        color: #585858;
+        margin: 0 1.8rem;
+        font-size: 1.2rem;
+        @include flex_c;
+        b {
+          margin-right: 5px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+}
+
+.show {
+  display: block;
+}
+
+.revert_btn {
+  width: 6rem;
+  height: 6rem;
+  background: $main;
+  border-radius: 6rem;
+  @include flex_c;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.6rem;
+
+  img {
+    width: 3.5rem;
+  }
+}
+
+
+@media (min-width: 500px) {
+  :root {
+    font-size: 14px;
+  }
+
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 16px;
+  }
+
+}
