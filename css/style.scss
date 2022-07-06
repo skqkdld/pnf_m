@@ -109,6 +109,7 @@ a {
       }
 
     }
+
     .modal_btn {
       width: 100%;
       background: $main;
@@ -116,19 +117,21 @@ a {
       font-size: 1.6rem;
       border-radius: 0 0 15px 15px;
       box-shadow: 3px 3px 7px #333;
-      
-      .left, .right {
+
+      .left,
+      .right {
         padding: 1.5rem;
         color: #fff;
         @include flex_c;
         flex: 1;
+
         img {
           width: 1.5rem;
           height: 1.5rem;
           margin-left: 5px;
         }
       }
-      
+
       .right {
         img {
           width: 1rem;
@@ -136,164 +139,153 @@ a {
           margin-left: 5px;
         }
       }
+
       span {
         border: rgba(255, 255, 255, 0.514) 1px solid;
         height: 20px;
         margin: 1.5rem 0;
       }
-    
+
     }
   }
 }
 
 header {
   width: 100%;
-  padding: 2rem;
-  color: #fff;
-  background: $main;
   position: fixed;
   top: 0;
-  z-index: 2;
-  @include flex_c;
+  z-index: 10;
 
-  h1 {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  img {
-    width: 3rem;
-    position: absolute;
-    right: 16px;
-  }
-}
-
-menu {
-  width: 100%;
-  padding: 7rem 1rem 1.5rem;
-  background: #fff;
-  margin: 0 auto;
-  position: relative;
-  padding-top: 7rem;
-
-  .menu_icon {
-    margin: 0 auto;
+  .h_t {
+    width: 100%;
+    padding: 2rem;
+    color: #fff;
+    background: $main;
     @include flex_c;
-    font-weight: bold;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
 
     img {
-      margin: 8px auto;
-      width: 3.5rem;
-    }
-
-    a {
-      display: flex;
-      flex-direction: column;
-      color: #333;
-      font-size: 1.25rem;
-      text-align: center;
+      width: 3rem;
+      position: absolute;
+      right: 16px;
     }
   }
 
-  .slick-prev {
-    background: url(../img/main_menu_p.png);
-    margin-right: .5rem;
-  }
-
-  .slick-next {
-    background: url(../img/main_menu_n.png);
-    margin-left: .5rem;
-  }
-
-  .slick-arrow {
-    width: 1.7rem;
-    height: 3rem;
-    color: rgba(0, 0, 0, 0);
-    background-repeat: no-repeat;
-    background-size: cover;
+  menu {
+    width: 100%;
+    padding: 1rem 1rem 1.5rem;
+    background: #fff;
+    margin: 0 auto;
     z-index: 1;
+
+    .menu_icon {
+      margin: 0 auto;
+      @include flex_c;
+      font-weight: bold;
+
+      img {
+        margin: 8px auto;
+        width: 3.5rem;
+      }
+
+      a {
+        display: flex;
+        flex-direction: column;
+        color: #333;
+        font-size: 1.25rem;
+        text-align: center;
+      }
+    }
+
+    .slick-prev {
+      background: url(../img/main_menu_p.png);
+      margin-right: .5rem;
+    }
+
+    .slick-next {
+      background: url(../img/main_menu_n.png);
+      margin-left: .5rem;
+    }
+
+    .slick-arrow {
+      width: 1.7rem;
+      height: 3rem;
+      color: rgba(0, 0, 0, 0);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
   }
 }
 
-.menu_list {
-  width: 100%;
+section {
   background-color: $sup;
+  padding: .6rem;
+}
 
-  .tabmenu {
-    position: relative;
-    width: 100%;
-    margin: 1rem 0;
-    background: #fff;
-
-
-    ul {
-      width: 100%;
-      display: flex;
-
-      li {
-        width: 25%;
-        font-size: 1.5rem;
-        background: #fff;
-
-        label {
-          padding: 1.5rem 0;
-          font-weight: bold;
-          @include flex_c;
-
-
-          p {
-            width: 2rem;
-            line-height: 1.5rem;
-            text-align: center;
-            color: #fff;
-            background: $red1;
-            border-radius: 2rem;
-            margin-left: .5rem;
-            font-size: 1rem;
-            font-weight: 200;
-          }
-        }
-
-        input {
-          display: none;
-        }
-      }
-    }
-  }
+.container {
+  width: 100%;
+  padding-top: 15rem;
   
-  .tabCon {
+  .list {
+    z-index: 1;
     width: 100%;
-    display: none;
-    padding: 1.2rem;
-    position: absolute;
-    box-sizing: border-box;
-    left: 0;
-    
-    .tablist {
-      background: #fff;
-      border-radius: 4px;
-      box-shadow: 1px 1px 7px #eee;
-      margin-bottom: 1.2rem;
-      padding: 1rem;
+    position: fixed;
+    list-style-type: none;
+    margin: 1.2rem 0;
+    padding: 0;
+    display: flex;
+    background: #fff;
+  }
 
-      div {
-        @include flex_b;
-        align-items: center;
-        font-size: 1.2rem;
-        font-weight: 400;
-        padding: .5rem 2rem;
-
-        b {
-          font-weight: 800;
-          margin-right: 1rem;
-        }
-
-        p {
-          @include flex_c;
-        }
-      }
+  .tab-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    text-decoration: none;
+    padding: 1.2rem 0;
+    cursor: pointer;
+    b {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    p {
+      width: 2rem;
+      height: 1.2rem;
+      background: $red1;
+      color: #fff;
+      border-radius: 2rem;
+      margin-left: 5px;
+      @include flex_c;
     }
 
+  }
+}
+
+.orange {
+  border-bottom: 4px solid $main;
+  border-top: 1px solid white;
+  color: black;
+  margin-top: -2px;
+}
+
+.tab-content {
+  display: none;
+  padding: 5.5rem 1.2rem 0;
+  
+  .tablist {
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    padding: 1.2rem;
+    margin: 1.2rem 0;
+    box-shadow: 1px 1px 7px #eee;
+  
     h2 {
       font-size: 1.6rem;
       font-weight: 800;
@@ -301,7 +293,7 @@ menu {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
-
+  
       span {
         width: 1rem;
         height: 1rem;
@@ -310,31 +302,25 @@ menu {
         margin-right: 1.4rem;
         display: inline-block;
       }
-
+  
     }
-
+  
     span {
       margin: 1rem 0;
       width: 100%;
       border-bottom: 1px solid $line;
       display: block;
+    }  
+
+    div {
+      @include flex_b;
     }
   }
 
-  .tabmenu {
-    width: 100%;
-    background: $sup;
+}
 
-    input:checked~label {
-      border-bottom: #0073CB 4px solid;
-      box-sizing: border-box;
-    }
-  }
-
-  .tabmenu input:checked~.tabCon {
-    display: block;
-  }
-
+.show {
+  display: block;
 }
 
 .revert_btn {

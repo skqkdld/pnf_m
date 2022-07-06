@@ -131,7 +131,8 @@ a {
   border-radius: 0 0 15px 15px;
   box-shadow: 3px 3px 7px #333;
 }
-.wrap .modal .modal_btn .left, .wrap .modal .modal_btn .right {
+.wrap .modal .modal_btn .left,
+.wrap .modal .modal_btn .right {
   padding: 1.5rem;
   color: #fff;
   display: flex;
@@ -139,7 +140,8 @@ a {
   justify-content: center;
   flex: 1;
 }
-.wrap .modal .modal_btn .left img, .wrap .modal .modal_btn .right img {
+.wrap .modal .modal_btn .left img,
+.wrap .modal .modal_btn .right img {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: 5px;
@@ -157,61 +159,62 @@ a {
 
 header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+header .h_t {
+  width: 100%;
   padding: 2rem;
   color: #fff;
   background: #0073CB;
-  position: fixed;
-  top: 0;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-header h1 {
+header .h_t h1 {
   font-size: 2rem;
   font-weight: bold;
 }
-header img {
+header .h_t img {
   width: 3rem;
   position: absolute;
   right: 16px;
 }
-
-menu {
+header menu {
   width: 100%;
-  padding: 7rem 1rem 1.5rem;
+  padding: 1rem 1rem 1.5rem;
   background: #fff;
   margin: 0 auto;
-  position: relative;
-  padding-top: 7rem;
+  z-index: 1;
 }
-menu .menu_icon {
+header menu .menu_icon {
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
 }
-menu .menu_icon img {
+header menu .menu_icon img {
   margin: 8px auto;
   width: 3.5rem;
 }
-menu .menu_icon a {
+header menu .menu_icon a {
   display: flex;
   flex-direction: column;
   color: #333;
   font-size: 1.25rem;
   text-align: center;
 }
-menu .slick-prev {
+header menu .slick-prev {
   background: url(../img/main_menu_p.png);
   margin-right: 0.5rem;
 }
-menu .slick-next {
+header menu .slick-next {
   background: url(../img/main_menu_n.png);
   margin-left: 0.5rem;
 }
-menu .slick-arrow {
+header menu .slick-arrow {
   width: 1.7rem;
   height: 3rem;
   color: rgba(0, 0, 0, 0);
@@ -220,80 +223,70 @@ menu .slick-arrow {
   z-index: 1;
 }
 
-.menu_list {
-  width: 100%;
+section {
   background-color: #F9F9F9;
+  padding: 0.6rem;
 }
-.menu_list .tabmenu {
-  position: relative;
+
+.container {
   width: 100%;
-  margin: 1rem 0;
-  background: #fff;
+  padding-top: 15rem;
 }
-.menu_list .tabmenu ul {
+.container .list {
+  z-index: 1;
   width: 100%;
+  position: fixed;
+  list-style-type: none;
+  margin: 1.2rem 0;
+  padding: 0;
   display: flex;
-}
-.menu_list .tabmenu ul li {
-  width: 25%;
-  font-size: 1.5rem;
   background: #fff;
 }
-.menu_list .tabmenu ul li label {
-  padding: 1.5rem 0;
+.container .tab-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  text-decoration: none;
+  padding: 1.2rem 0;
+  cursor: pointer;
+}
+.container .tab-button b {
+  font-size: 1.4rem;
   font-weight: bold;
+}
+.container .tab-button p {
+  width: 2rem;
+  height: 1.2rem;
+  background: #EC2B2B;
+  color: #fff;
+  border-radius: 2rem;
+  margin-left: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.menu_list .tabmenu ul li label p {
-  width: 2rem;
-  line-height: 1.5rem;
-  text-align: center;
-  color: #fff;
-  background: #EC2B2B;
-  border-radius: 2rem;
-  margin-left: 0.5rem;
-  font-size: 1rem;
-  font-weight: 200;
+
+.orange {
+  border-bottom: 4px solid #0073CB;
+  border-top: 1px solid white;
+  color: black;
+  margin-top: -2px;
 }
-.menu_list .tabmenu ul li input {
+
+.tab-content {
   display: none;
+  padding: 5.5rem 1.2rem 0;
 }
-.menu_list .tabCon {
+.tab-content .tablist {
   width: 100%;
-  display: none;
-  padding: 1.2rem;
-  position: absolute;
-  box-sizing: border-box;
-  left: 0;
-}
-.menu_list .tabCon .tablist {
   background: #fff;
   border-radius: 4px;
+  padding: 1.2rem;
+  margin: 1.2rem 0;
   box-shadow: 1px 1px 7px #eee;
-  margin-bottom: 1.2rem;
-  padding: 1rem;
 }
-.menu_list .tabCon .tablist div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: 400;
-  padding: 0.5rem 2rem;
-}
-.menu_list .tabCon .tablist div b {
-  font-weight: 800;
-  margin-right: 1rem;
-}
-.menu_list .tabCon .tablist div p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.menu_list .tabCon h2 {
+.tab-content .tablist h2 {
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -301,7 +294,7 @@ menu .slick-arrow {
   white-space: nowrap;
   overflow: hidden;
 }
-.menu_list .tabCon h2 span {
+.tab-content .tablist h2 span {
   width: 1rem;
   height: 1rem;
   border-radius: 14px;
@@ -309,21 +302,19 @@ menu .slick-arrow {
   margin-right: 1.4rem;
   display: inline-block;
 }
-.menu_list .tabCon span {
+.tab-content .tablist span {
   margin: 1rem 0;
   width: 100%;
   border-bottom: 1px solid #D9D9D9;
   display: block;
 }
-.menu_list .tabmenu {
-  width: 100%;
-  background: #F9F9F9;
+.tab-content .tablist div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.menu_list .tabmenu input:checked ~ label {
-  border-bottom: #0073CB 4px solid;
-  box-sizing: border-box;
-}
-.menu_list .tabmenu input:checked ~ .tabCon {
+
+.show {
   display: block;
 }
 
